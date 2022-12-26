@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>결과</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>번호</th>
+        <th>국어</th>
+        <th>영어</th>
+        <th>수학</th>
+        <th>총점</th>
+        <th>평균</th>
+    </tr>
+    <!--taskVO 에있는걸 받아온다-->
+    <tr th:object="${taskVO}">
+        <!--학생번호-->
+        <td th:text="*{num}"></td>
+        <!--국어점수-->
+        <td th:text="*{kor}"></td>
+        <!--영어점수-->
+        <td th:text="*{eng}"></td>
+        <!--수학점수-->
+        <td th:text="*{math}"></td>
+        <!--총합-->
+        <td th:text="*{total}"></td>
+        <!--총 평균-->
+        <td th:text="*{average}"></td>
+    </tr>
+</table>
+</body>
+</html>

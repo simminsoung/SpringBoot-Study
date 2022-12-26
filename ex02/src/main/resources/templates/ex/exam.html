@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>시험은 잘 보셨나요?</title>
+    <style>
+        input {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ex/exam 이동  -->    <!--전송 방식을 post 컨트롤러에서 postMapping-->
+<form action="/ex/exam" method="post">
+                <!--id가 아니라 name으로 해야함...젭알-->
+    <input type="text" name="num" placeholder="번호를 입력하세요">
+    <input type="text" name="kor" placeholder="국어점수를 입력하세요">
+    <input type="text" name="eng" placeholder="영어점수를 입력하세요">
+    <input type="text" name="math" placeholder="수학점수를 입력하세요">
+    <input type="submit" value="저장">
+</form>
+</body>
+</html>
